@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:projeto_tripadvisor/model/destination.dart';
 import 'package:projeto_tripadvisor/screens/widgets/destination_description.dart';
 import 'package:projeto_tripadvisor/screens/widgets/destination_details.dart';
+import 'package:projeto_tripadvisor/screens/widgets/pictures.dart';
 
 class HomePage extends StatelessWidget {
   final destination = Destination(
@@ -39,6 +40,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
+        child: SafeArea (
         child: Padding(
           padding: const EdgeInsets.symmetric(
             horizontal: 25
@@ -47,10 +49,12 @@ class HomePage extends StatelessWidget {
             children: [
               Image.asset(destination.banner),
               DestinationDetails(destination),
-              DestinationDescription(destination)
+              DestinationDescription(destination),
+              Pictures(destination)
             ],
           ),
         ),
+        )
       )
     );
   }
