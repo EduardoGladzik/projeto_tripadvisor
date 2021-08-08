@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:projeto_tripadvisor/model/destination.dart';
+import 'package:projeto_tripadvisor/screens/widgets/destination_description.dart';
 import 'package:projeto_tripadvisor/screens/widgets/destination_details.dart';
 
 class HomePage extends StatelessWidget {
@@ -8,7 +9,7 @@ class HomePage extends StatelessWidget {
     banner: "assets/images/Banner.jpg",
     location: "Paris - França",
     rating: 32,
-    descriptionTitle: "Conheça as maravilhas da capital Francesa",
+    descriptionTitle: "Conheça As Maravilhas da Capital Francesa",
     description: "É impossível não se render aos encantos de Paris, a bela capital francesa e destino turístico frequentado por milhões de pessoas todos os anos. Vibrante, charmosa, romântica, divertida, além de berço da cultura e da arte, a Cidade Luz, como é chamada, possui uma infindável lista de qualidades.",
     pictures: [
       Image.asset("assets/images/foto_1.jpg"),
@@ -46,6 +47,7 @@ class HomePage extends StatelessWidget {
             children: [
               Image.asset(destination.banner),
               DestinationDetails(destination),
+              DestinationDescription(destination)
             ],
           ),
         ),

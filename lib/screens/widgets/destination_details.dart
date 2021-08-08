@@ -1,7 +1,7 @@
 import 'package:projeto_tripadvisor/model/destination.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:projeto_tripadvisor/screens/widgets/starRating.dart';
+import 'package:projeto_tripadvisor/screens/widgets/star_rating.dart';
 
 class DestinationDetails extends StatelessWidget {
   final Destination _destination;
