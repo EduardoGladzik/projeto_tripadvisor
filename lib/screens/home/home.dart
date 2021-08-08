@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:projeto_tripadvisor/model/destination.dart';
+import 'package:projeto_tripadvisor/screens/widgets/destination_details.dart';
 
 class HomePage extends StatelessWidget {
   final destination = Destination(
@@ -36,7 +37,19 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(
+            horizontal: 25
+          ),
+          child: Column(
+            children: [
+              Image.asset(destination.banner),
+              DestinationDetails(destination),
+            ],
+          ),
+        ),
+      )
     );
   }
 }
